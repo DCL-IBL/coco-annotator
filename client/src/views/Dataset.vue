@@ -53,11 +53,11 @@
             No images found in directory.
           </p>
           <div v-else>
-            <Pagination :pages="pages" @pagechange="updatePage" />
+            <Pagination :pages="1" @pagechange="updatePage" />
             <div class="row">
               <ImageCard v-for="image in images" :key="image.id" :image="image" />
             </div>
-            <Pagination :pages="pages" @pagechange="updatePage" />
+            <Pagination :pages="1" @pagechange="updatePage" />
           </div>
 
         </div>
@@ -498,7 +498,7 @@ export default {
     return {
       pages: 1,
       generateLimit: 100,
-      limit: 52,
+      limit: 400,
       imageCount: 0,
       categories: [],
       images: [],
