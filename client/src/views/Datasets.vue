@@ -51,7 +51,7 @@
           You need to create a dataset!
         </p>
         <div v-else style="background-color: gray">
-          <Pagination :pages="pages" @pagechange="updatePage" />
+          <Pagination :pages="1" @pagechange="updatePage" />
           <div class="row bg-light">
             <DatasetCard
               v-for="dataset in datasets"
@@ -198,7 +198,7 @@ export default {
   data() {
     return {
       pages: 1,
-      limit: 52,
+      limit: 400,
       page: 1,
       create: {
         name: "",

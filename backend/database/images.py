@@ -179,9 +179,9 @@ class ImageModel(DynamicDocument):
     def __call__(self):
 
         image = im.Image.from_path(self.path)
-        for annotation in AnnotationModel.objects(image_id=self.id, deleted=False).all():
-            if not annotation.is_empty():
-                image.add(annotation())
+        #for annotation in AnnotationModel.objects(image_id=self.id, deleted=False).all():
+        #    if not annotation.is_empty():
+        #        image.add(annotation())
 
         return image
     
