@@ -178,6 +178,8 @@ class ImageModel(DynamicDocument):
 
     def __call__(self):
 
+        if not os.path.exists(self.path):
+            return None
         image = im.Image.from_path(self.path)
         #for annotation in AnnotationModel.objects(image_id=self.id, deleted=False).all():
         #    if not annotation.is_empty():
