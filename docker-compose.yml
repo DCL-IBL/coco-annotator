@@ -57,6 +57,7 @@ services:
       - 5672:5672
     networks:
       - cocoannotator
+    privileged: true
   database:
     image: mongo:4.0
     container_name: annotator_mongodb
